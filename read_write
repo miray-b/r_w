@@ -1,0 +1,20 @@
+
+with open("dosya.txt", "w", encoding="utf-8") as dosya:
+    metin = input("Dosyaya yazmak istediğiniz metni girin: ")
+    dosya.write(metin + "\n") 
+
+with open("dosya.txt", "r", encoding="utf-8") as dosya:
+    icerik = dosya.read()  
+    print("\nDosyanın içeriği:")
+    print(icerik)
+
+with open("dosya.txt", "w", encoding="utf-8") as dosya:
+    print("Lütfen 5 farklı satır girin:")
+    for i in range(5):
+        satir = input(f"{i+1}. satır: ")
+        dosya.write(satir + "\n") 
+
+with open("dosya.txt", "r", encoding="utf-8") as dosya:
+    print("\nDosyadaki satırlar:")
+    for satir in dosya:
+        print(satir.strip()) 
